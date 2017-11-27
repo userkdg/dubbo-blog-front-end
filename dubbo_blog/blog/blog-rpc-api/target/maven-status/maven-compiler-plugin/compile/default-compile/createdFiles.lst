@@ -1,0 +1,3 @@
+com\isunday\blog\rpc\api\IRoleService.class
+com\isunday\blog\rpc\api\IBlogService.class
+com\isunday\blog\rpc\api\IUserService.class

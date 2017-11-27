@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/context.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--引入zookeeper的配置信息
+    <context:property-placeholder location="config-dubbo.properties"/>-->
+    <dubbo:application name="blog-rpc-service"/>
+
+    <!--<dubbo:registry address="zookeeper://${dubbo.provider.registry.address}"/>
+    <dubbo:protocol name="dubbo" port="${dubbo.provider.protocal.port}"/>-->
+
+    <!--开启注解配置
+    <dubbo:annotation package="com.isunday.blog.service.impl"/>-->
+
+    <dubbo:registry address="zookeeper://zkserver:2181"/>
+    <dubbo:protocol name="dubbo" port="20882"/>
+
+    <dubbo:monitor protocol="registry"/>
+
+    <!-- 用户实现类-->
+    <bean id="userService" class="com.isunday.blog.rpc.service.impl.UserServiceImpl"/>
+    <!--暴露的用户接口-->
+    <dubbo:service interface="com.isunday.blog.rpc.api.IUserService" ref="userService" timeout="10000"/>
+
+    <bean id="roleService" class="com.isunday.blog.rpc.service.impl.RoleServiceImpl"/>
+    <dubbo:service interface="com.isunday.blog.rpc.api.IRoleService" ref="roleService" timeout="10000"/>
+
+    <bean id="blogService" class="com.isunday.blog.rpc.service.impl.BlogServiceImpl"/>
+    <dubbo:service interface="com.isunday.blog.rpc.api.IBlogService" ref="blogService" timeout="10000"/>
+</beans>

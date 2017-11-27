@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.iSunday</groupId>
+    <artifactId>blog</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>blog-common</module>
+        <module>blog-web</module>
+        <module>blog-rpc-service</module>
+        <module>blog-rpc-api</module>
+        <module>blog-dao</module>
+    </modules>
+
+    <properties>
+        <!-- 编码 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- spring版本号 -->
+      <!--  <spring.version>5.0.0.RELEASE</spring.version>-->
+        <spring.version>4.3.12.RELEASE</spring.version>
+        <spring-session.version>1.3.1.RELEASE</spring-session.version>
+        <spring-data-redis.version>1.8.7.RELEASE</spring-data-redis.version>
+        <!-- 数据库 -->
+        <mysql.version>5.1.39</mysql.version>
+        <sharding-jdbc.version>1.4.1</sharding-jdbc.version>
+        <!-- mybatis版本号 -->
+        <mybatis.version>3.4.2</mybatis.version>
+        <mybatis-spring.version>1.3.1</mybatis-spring.version>
+        <mybatis-pagehelper.version>5.0.1</mybatis-pagehelper.version>
+        <mybatis-generator.version>1.3.5</mybatis-generator.version>
+        <mybatis-ehcache.version>1.0.0</mybatis-ehcache.version>
+
+        <!-- log4j日志文件管理包版本 -->
+        <slf4j.version>1.7.9</slf4j.version>
+        <log4j.version>2.8.2</log4j.version>
+
+        <druid.version>1.1.2</druid.version>
+        <fastjson.version>1.2.36</fastjson.version>
+        <dubbo.version>2.5.5</dubbo.version>
+
+        <zookeeper.version>3.5.3-beta</zookeeper.version>
+        <jedis.version>2.9.0</jedis.version>
+        <jackson.version>2.9.0</jackson.version>
+        <shiro.version>1.4.0</shiro.version>
+        <quartz.version>2.2.3</quartz.version>
+        <aspectj.version>1.8.10</aspectj.version>
+        <redis.version>2.9.0</redis.version>
+        <activemq.version>5.7.0</activemq.version>
+        <activemq-spring.version>5.15.2</activemq-spring.version>
+        <netEhcache.version>2.10.3</netEhcache.version>
+        <ehcache.version>3.4.0</ehcache.version>
+        <mybatis-ehcache.version>1.0.0</mybatis-ehcache.version>
+        <zxing.version>3.3.0</zxing.version>
+        <springfox.version>2.7.0</springfox.version>
+        <!--工具-->
+        <swagger.version>2.4.0</swagger.version>
+        <jstl.version></jstl.version>
+        <poi.version>3.9</poi.version>
+        <jxl.version>2.6.12</jxl.version>
+
+    </properties>
+
+
+</project>
